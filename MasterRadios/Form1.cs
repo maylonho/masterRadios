@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace MasterRadios
 {
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void serviçoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmServicos frmServicos = new frmServicos();
+            frmServicos.Show();
         }
     }
 }
