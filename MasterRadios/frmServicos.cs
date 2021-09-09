@@ -26,6 +26,22 @@ namespace MasterRadios
             dgv_Servicos.Columns[3].Width = 330;
             dgv_Servicos.Columns[4].Width = 430;
 
+            int qtditens = dgv_Servicos.Rows.Count;
+            lblContItens.Text = qtditens.ToString();
+
+            if(qtditens >= 100)
+            {
+                MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
+                txtDefeito.Enabled = false;
+                txtNumeroSerie.Enabled = false;
+                txtSolucao.Enabled = false;
+                cbModelo.Enabled = false;
+                btnCadastrar.Enabled = false;
+                btnLimpar.Enabled = false;
+                btnPesquisar.Enabled = false;
+                lblLicenca.Visible = true;
+            }
+
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -63,6 +79,8 @@ namespace MasterRadios
         private void txtNumeroSerie_TextChanged(object sender, EventArgs e)
         {
             dgv_Servicos.DataSource = classBanco.ObterServicosNumeroSerie(txtNumeroSerie.Text);
+            int qtditens = dgv_Servicos.Rows.Count;
+            lblContItens.Text = qtditens.ToString();
         }
     }
 }
