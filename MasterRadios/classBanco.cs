@@ -66,7 +66,7 @@ namespace MasterRadios
 
         public static void CadastrarServico(classServicos cs)
         {
-            var dtAtual = DateTime.Now.ToString("yyyy-MM-dd");
+            var dtAtual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             try
             {
                 var cmd = ConexaoBanco().CreateCommand();

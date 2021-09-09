@@ -19,8 +19,9 @@ namespace MasterRadios
 
         private void frmServicos_Load(object sender, EventArgs e)
         {
+            
             dgv_Servicos.DataSource = classBanco.ObterServicos();
-            dgv_Servicos.Columns[0].Width = 90;
+            dgv_Servicos.Columns[0].Width = 110;
             dgv_Servicos.Columns[1].Width = 80;
             dgv_Servicos.Columns[2].Width = 90;
             dgv_Servicos.Columns[3].Width = 330;
@@ -64,6 +65,7 @@ namespace MasterRadios
 
             classBanco.CadastrarServico(cs);
             dgv_Servicos.DataSource = classBanco.ObterServicos();
+            txtNumeroSerie.Focus();
   
         }
 
