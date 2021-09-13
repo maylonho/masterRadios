@@ -162,6 +162,7 @@ namespace MasterRadios
             this.dgv_Servicos.AllowUserToAddRows = false;
             this.dgv_Servicos.AllowUserToDeleteRows = false;
             this.dgv_Servicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Servicos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_Servicos.Location = new System.Drawing.Point(13, 13);
             this.dgv_Servicos.MultiSelect = false;
             this.dgv_Servicos.Name = "dgv_Servicos";
@@ -178,6 +179,7 @@ namespace MasterRadios
             this.dgv_Servicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Servicos.Size = new System.Drawing.Size(959, 482);
             this.dgv_Servicos.TabIndex = 8;
+            this.dgv_Servicos.DoubleClick += new System.EventHandler(this.dgv_Servicos_DoubleClick);
             // 
             // statusStrip1
             // 
@@ -265,12 +267,12 @@ namespace MasterRadios
         private System.Windows.Forms.TextBox txtDefeito;
         private System.Windows.Forms.TextBox txtSolucao;
         private System.Windows.Forms.ComboBox cbModelo;
-        private System.Windows.Forms.DataGridView dgv_Servicos;
         public System.Windows.Forms.TextBox txtNumeroSerie;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel lblContItens;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.Label lblLicenca;
+        public System.Windows.Forms.DataGridView dgv_Servicos;
+        public System.Windows.Forms.Label lblLicenca;
     }
 }

@@ -12,6 +12,7 @@ namespace MasterRadios
 {
     public partial class frmServicos : Form
     {
+        frmServicos_Edit F_servicos_Edit;
         public frmServicos()
         {
             InitializeComponent();
@@ -21,16 +22,18 @@ namespace MasterRadios
         {
             
             dgv_Servicos.DataSource = classBanco.ObterServicos();
-            dgv_Servicos.Columns[0].Width = 110;
-            dgv_Servicos.Columns[1].Width = 80;
-            dgv_Servicos.Columns[2].Width = 90;
-            dgv_Servicos.Columns[3].Width = 330;
-            dgv_Servicos.Columns[4].Width = 430;
+            dgv_Servicos.Columns[0].Visible = false;
+            dgv_Servicos.Columns[0].Width = 30;
+            dgv_Servicos.Columns[1].Width = 110;
+            dgv_Servicos.Columns[2].Width = 80;
+            dgv_Servicos.Columns[3].Width = 90;
+            dgv_Servicos.Columns[4].Width = 330;
+            dgv_Servicos.Columns[5].Width = 430;
 
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
 
-            if(qtditens >= 100)
+            if(qtditens >= 200)
             {
                 MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
                 txtDefeito.Enabled = false;
@@ -83,6 +86,36 @@ namespace MasterRadios
             dgv_Servicos.DataSource = classBanco.ObterServicosNumeroSerie(txtNumeroSerie.Text);
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
+        }
+
+        private void dgv_Servicos_DoubleClick(object sender, EventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+
+            int id = Int32.Parse(dgv.SelectedRows[0].Cells[0].Value.ToString());
+            string data = dgv.SelectedRows[0].Cells[1].Value.ToString();
+            string modelo = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            string numSerie = dgv.SelectedRows[0].Cells[3].Value.ToString();
+            string defeito = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            string solucao = dgv.SelectedRows[0].Cells[5].Value.ToString();
+
+
+
+
+
+            frmServicos_Edit edit = new frmServicos_Edit(id, modelo, numSerie, defeito, solucao, this);
+            edit.ShowDialog();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnVer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
