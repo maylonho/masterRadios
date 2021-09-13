@@ -10,12 +10,18 @@ namespace MasterRadios
 {
     class classBanco
     {
+        public static string caminho = System.Environment.CurrentDirectory;
+        public static string nomeBanco = "banco_master.db";
+        public static string caminhoBanco = caminho + @"\banco\";
+
         private static SQLiteConnection conexao;
 
         private static SQLiteConnection ConexaoBanco()
         {
-            conexao = new SQLiteConnection("Data Source=C:\\Users\\maste\\Desktop\\masterRadios\\MasterRadios\\banco\\banco_master.db");
-            conexao.Open();
+            conexao = new SQLiteConnection("Data Source=" + caminhoBanco + nomeBanco);
+            //conexao = new SQLiteConnection("Data Source=C:\\Users\\maste\\Desktop\\masterRadios\\MasterRadios\\banco\\banco_master.db");
+            conexao.Open(); 
+            
             return conexao;
 
         }
@@ -34,6 +40,8 @@ namespace MasterRadios
                 da.Fill(dt);
                 vcon.Close();
                 return dt;
+
+               
 
             }
             catch (Exception ex)

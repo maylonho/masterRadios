@@ -13,14 +13,29 @@ namespace MasterRadios
     public partial class frmServicos : Form
     {
         frmServicos_Edit F_servicos_Edit;
+        public int status = 0;
         public frmServicos()
         {
             InitializeComponent();
         }
 
         private void frmServicos_Load(object sender, EventArgs e)
+
         {
+            int dia = DateTime.Now.Day;
+            int mes = DateTime.Now.Month;
+            int ano = DateTime.Now.Year;
             
+            DateTime dtinicial = new DateTime(ano, mes, dia);
+            DateTime dtfinal = new DateTime(2021, 12, 01);
+
+
+            lblDataInicial.Text = dtinicial.ToString();
+            lblDataFinal.Text = dtfinal.ToString();
+
+            lblDataRestante.Text = DateTime.Compare(dtfinal, dtinicial).ToString();
+
+            lblDataHoje.Text = DateTime.Now.ToString("D");
             dgv_Servicos.DataSource = classBanco.ObterServicos();
             dgv_Servicos.Columns[0].Visible = false;
             dgv_Servicos.Columns[0].Width = 30;
@@ -116,6 +131,21 @@ namespace MasterRadios
         private void btnVer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv_Servicos_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_Servicos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+
+            cbModelo.Text = dgv.SelectedRows[0].Cells[2].Value.ToString();
+            txtDefeito.Text = dgv.SelectedRows[0].Cells[4].Value.ToString();
+            txtSolucao.Text = dgv.SelectedRows[0].Cells[5].Value.ToString();
+            
         }
     }
 }

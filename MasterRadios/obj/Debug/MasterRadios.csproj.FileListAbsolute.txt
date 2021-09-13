@@ -59,3 +59,5 @@ C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\obj\Debug\MasterRadios.cspr
 C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\obj\Debug\MasterRadios.exe
 C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\obj\Debug\MasterRadios.pdb
 C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\obj\Debug\MasterRadios.frmServicos_Edit.resources
+C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\bin\Debug\Eagle.dll
+C:\Users\maste\Desktop\masterRadiosEdit\MasterRadios\bin\Debug\System.Data.SQLite.SEE.License.dll

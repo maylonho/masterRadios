@@ -34,28 +34,34 @@ namespace MasterRadios
 
         private void btnExcluir_edit_Click(object sender, EventArgs e)
         {
-            classBanco.DeletarServico(lblId.Text);
-            fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
-            Close();
-
+            DialogResult res = MessageBox.Show("Confirma exclusão?", "Excluir", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                classBanco.DeletarServico(lblId.Text);
+                fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
+                Close();
+            }
 
         }
 
         private void btnSalvar_edit_Click(object sender, EventArgs e)
         {
-            classServicos u = new classServicos();
-            u.id = Int32.Parse(lblId.Text);
-            u.modeloRadio = cbModelo_edit.Text;
-            u.numSerie = txtNumeroSerie_edit.Text;
-            u.defeito = txtDefeito_edit.Text;
-            u.solucao = txtSolucao_edit.Text;
 
-            classBanco.AtualizarUsuario(u);
+            DialogResult res = MessageBox.Show("Confirma as alterações?", "Alterações", MessageBoxButtons.YesNo);
+            if(res == DialogResult.Yes)
+            {
+                classServicos u = new classServicos();
+                u.id = Int32.Parse(lblId.Text);
+                u.modeloRadio = cbModelo_edit.Text;
+                u.numSerie = txtNumeroSerie_edit.Text;
+                u.defeito = txtDefeito_edit.Text;
+                u.solucao = txtSolucao_edit.Text;
 
-            fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
-            Close();
+                classBanco.AtualizarUsuario(u);
 
-
+                fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
+                Close();
+            }
         }
 
         private void frmServicos_Edit_FormClosed(object sender, FormClosedEventArgs e)

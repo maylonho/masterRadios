@@ -48,6 +48,10 @@ namespace MasterRadios
             this.lblContItens = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblLicenca = new System.Windows.Forms.Label();
+            this.lblDataHoje = new System.Windows.Forms.Label();
+            this.lblDataRestante = new System.Windows.Forms.Label();
+            this.lblDataInicial = new System.Windows.Forms.Label();
+            this.lblDataFinal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicos)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -179,6 +183,8 @@ namespace MasterRadios
             this.dgv_Servicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Servicos.Size = new System.Drawing.Size(959, 482);
             this.dgv_Servicos.TabIndex = 8;
+            this.dgv_Servicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Servicos_CellClick);
+            this.dgv_Servicos.SelectionChanged += new System.EventHandler(this.dgv_Servicos_SelectionChanged);
             this.dgv_Servicos.DoubleClick += new System.EventHandler(this.dgv_Servicos_DoubleClick);
             // 
             // statusStrip1
@@ -223,11 +229,51 @@ namespace MasterRadios
             this.lblLicenca.Text = "Licença expirada, procure o desenvovedor.";
             this.lblLicenca.Visible = false;
             // 
+            // lblDataHoje
+            // 
+            this.lblDataHoje.AutoSize = true;
+            this.lblDataHoje.Location = new System.Drawing.Point(771, 644);
+            this.lblDataHoje.Name = "lblDataHoje";
+            this.lblDataHoje.Size = new System.Drawing.Size(196, 13);
+            this.lblDataHoje.TabIndex = 11;
+            this.lblDataHoje.Text = "Segunda-feira, 13 de Setembro de 2021";
+            // 
+            // lblDataRestante
+            // 
+            this.lblDataRestante.AutoSize = true;
+            this.lblDataRestante.Location = new System.Drawing.Point(28, 567);
+            this.lblDataRestante.Name = "lblDataRestante";
+            this.lblDataRestante.Size = new System.Drawing.Size(86, 13);
+            this.lblDataRestante.TabIndex = 12;
+            this.lblDataRestante.Text = "Número de Série";
+            // 
+            // lblDataInicial
+            // 
+            this.lblDataInicial.AutoSize = true;
+            this.lblDataInicial.Location = new System.Drawing.Point(28, 541);
+            this.lblDataInicial.Name = "lblDataInicial";
+            this.lblDataInicial.Size = new System.Drawing.Size(86, 13);
+            this.lblDataInicial.TabIndex = 13;
+            this.lblDataInicial.Text = "Número de Série";
+            // 
+            // lblDataFinal
+            // 
+            this.lblDataFinal.AutoSize = true;
+            this.lblDataFinal.Location = new System.Drawing.Point(28, 519);
+            this.lblDataFinal.Name = "lblDataFinal";
+            this.lblDataFinal.Size = new System.Drawing.Size(86, 13);
+            this.lblDataFinal.TabIndex = 14;
+            this.lblDataFinal.Text = "Número de Série";
+            // 
             // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.lblDataFinal);
+            this.Controls.Add(this.lblDataInicial);
+            this.Controls.Add(this.lblDataRestante);
+            this.Controls.Add(this.lblDataHoje);
             this.Controls.Add(this.lblLicenca);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgv_Servicos);
@@ -274,5 +320,9 @@ namespace MasterRadios
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         public System.Windows.Forms.DataGridView dgv_Servicos;
         public System.Windows.Forms.Label lblLicenca;
+        private System.Windows.Forms.Label lblDataHoje;
+        private System.Windows.Forms.Label lblDataRestante;
+        private System.Windows.Forms.Label lblDataInicial;
+        private System.Windows.Forms.Label lblDataFinal;
     }
 }
