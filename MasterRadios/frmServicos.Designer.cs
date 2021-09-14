@@ -50,8 +50,6 @@ namespace MasterRadios
             this.lblLicenca = new System.Windows.Forms.Label();
             this.lblDataHoje = new System.Windows.Forms.Label();
             this.lblDataRestante = new System.Windows.Forms.Label();
-            this.lblDataInicial = new System.Windows.Forms.Label();
-            this.lblDataFinal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicos)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -241,37 +239,17 @@ namespace MasterRadios
             // lblDataRestante
             // 
             this.lblDataRestante.AutoSize = true;
-            this.lblDataRestante.Location = new System.Drawing.Point(28, 567);
+            this.lblDataRestante.Location = new System.Drawing.Point(330, 644);
             this.lblDataRestante.Name = "lblDataRestante";
-            this.lblDataRestante.Size = new System.Drawing.Size(86, 13);
+            this.lblDataRestante.Size = new System.Drawing.Size(13, 13);
             this.lblDataRestante.TabIndex = 12;
-            this.lblDataRestante.Text = "Número de Série";
-            // 
-            // lblDataInicial
-            // 
-            this.lblDataInicial.AutoSize = true;
-            this.lblDataInicial.Location = new System.Drawing.Point(28, 541);
-            this.lblDataInicial.Name = "lblDataInicial";
-            this.lblDataInicial.Size = new System.Drawing.Size(86, 13);
-            this.lblDataInicial.TabIndex = 13;
-            this.lblDataInicial.Text = "Número de Série";
-            // 
-            // lblDataFinal
-            // 
-            this.lblDataFinal.AutoSize = true;
-            this.lblDataFinal.Location = new System.Drawing.Point(28, 519);
-            this.lblDataFinal.Name = "lblDataFinal";
-            this.lblDataFinal.Size = new System.Drawing.Size(86, 13);
-            this.lblDataFinal.TabIndex = 14;
-            this.lblDataFinal.Text = "Número de Série";
+            this.lblDataRestante.Text = "--";
             // 
             // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
-            this.Controls.Add(this.lblDataFinal);
-            this.Controls.Add(this.lblDataInicial);
             this.Controls.Add(this.lblDataRestante);
             this.Controls.Add(this.lblDataHoje);
             this.Controls.Add(this.lblLicenca);
@@ -322,7 +300,5 @@ namespace MasterRadios
         public System.Windows.Forms.Label lblLicenca;
         private System.Windows.Forms.Label lblDataHoje;
         private System.Windows.Forms.Label lblDataRestante;
-        private System.Windows.Forms.Label lblDataInicial;
-        private System.Windows.Forms.Label lblDataFinal;
     }
 }

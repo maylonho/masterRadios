@@ -26,14 +26,16 @@ namespace MasterRadios
             int mes = DateTime.Now.Month;
             int ano = DateTime.Now.Year;
             
-            DateTime dtinicial = new DateTime(ano, mes, dia);
-            DateTime dtfinal = new DateTime(2021, 12, 01);
+            System.DateTime dtinicial = new System.DateTime(ano, mes, dia);
+            System.DateTime dtfinal = new System.DateTime(2021, 12, 01);
+            System.TimeSpan date5 = dtfinal - dtinicial;
+
+            int dateExpira = Int32.Parse(date5.Days.ToString());
 
 
-            lblDataInicial.Text = dtinicial.ToString();
-            lblDataFinal.Text = dtfinal.ToString();
 
-            lblDataRestante.Text = DateTime.Compare(dtfinal, dtinicial).ToString();
+
+            lblDataRestante.Text = dateExpira.ToString();
 
             lblDataHoje.Text = DateTime.Now.ToString("D");
             dgv_Servicos.DataSource = classBanco.ObterServicos();
@@ -48,7 +50,7 @@ namespace MasterRadios
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
 
-            if(qtditens >= 200)
+            if(qtditens >= 200 || dateExpira <= 0)
             {
                 MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
                 txtDefeito.Enabled = false;
