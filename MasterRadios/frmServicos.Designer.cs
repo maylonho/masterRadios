@@ -56,6 +56,7 @@ namespace MasterRadios
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCadastrar.Location = new System.Drawing.Point(897, 600);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(75, 36);
@@ -66,6 +67,7 @@ namespace MasterRadios
             // 
             // btnLimpar
             // 
+            this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLimpar.Location = new System.Drawing.Point(816, 600);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 36);
@@ -76,7 +78,8 @@ namespace MasterRadios
             // 
             // btnPesquisar
             // 
-            this.btnPesquisar.Location = new System.Drawing.Point(445, 514);
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.Location = new System.Drawing.Point(445, 531);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(75, 23);
             this.btnPesquisar.TabIndex = 7;
@@ -86,8 +89,9 @@ namespace MasterRadios
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 519);
+            this.label1.Location = new System.Drawing.Point(183, 536);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 13);
             this.label1.TabIndex = 3;
@@ -95,8 +99,9 @@ namespace MasterRadios
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(183, 559);
+            this.label2.Location = new System.Drawing.Point(183, 576);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -104,8 +109,9 @@ namespace MasterRadios
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(588, 519);
+            this.label3.Location = new System.Drawing.Point(588, 536);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 5;
@@ -113,8 +119,9 @@ namespace MasterRadios
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(588, 559);
+            this.label4.Location = new System.Drawing.Point(588, 576);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 6;
@@ -122,7 +129,8 @@ namespace MasterRadios
             // 
             // txtNumeroSerie
             // 
-            this.txtNumeroSerie.Location = new System.Drawing.Point(275, 516);
+            this.txtNumeroSerie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumeroSerie.Location = new System.Drawing.Point(275, 533);
             this.txtNumeroSerie.Name = "txtNumeroSerie";
             this.txtNumeroSerie.Size = new System.Drawing.Size(164, 20);
             this.txtNumeroSerie.TabIndex = 1;
@@ -130,20 +138,23 @@ namespace MasterRadios
             // 
             // txtDefeito
             // 
-            this.txtDefeito.Location = new System.Drawing.Point(646, 516);
+            this.txtDefeito.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDefeito.Location = new System.Drawing.Point(646, 533);
             this.txtDefeito.Name = "txtDefeito";
             this.txtDefeito.Size = new System.Drawing.Size(326, 20);
             this.txtDefeito.TabIndex = 2;
             // 
             // txtSolucao
             // 
-            this.txtSolucao.Location = new System.Drawing.Point(646, 556);
+            this.txtSolucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSolucao.Location = new System.Drawing.Point(646, 573);
             this.txtSolucao.Name = "txtSolucao";
             this.txtSolucao.Size = new System.Drawing.Size(326, 20);
             this.txtSolucao.TabIndex = 4;
             // 
             // cbModelo
             // 
+            this.cbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cbModelo.FormattingEnabled = true;
             this.cbModelo.Items.AddRange(new object[] {
             "EP450",
@@ -154,7 +165,7 @@ namespace MasterRadios
             "DGP8050",
             "DGP8050e",
             "DGP8050ex"});
-            this.cbModelo.Location = new System.Drawing.Point(275, 559);
+            this.cbModelo.Location = new System.Drawing.Point(275, 576);
             this.cbModelo.Name = "cbModelo";
             this.cbModelo.Size = new System.Drawing.Size(245, 21);
             this.cbModelo.TabIndex = 3;
@@ -179,7 +190,7 @@ namespace MasterRadios
             this.dgv_Servicos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Servicos.RowHeadersVisible = false;
             this.dgv_Servicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Servicos.Size = new System.Drawing.Size(959, 482);
+            this.dgv_Servicos.Size = new System.Drawing.Size(959, 512);
             this.dgv_Servicos.TabIndex = 8;
             this.dgv_Servicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Servicos_CellClick);
             this.dgv_Servicos.SelectionChanged += new System.EventHandler(this.dgv_Servicos_SelectionChanged);
@@ -217,10 +228,11 @@ namespace MasterRadios
             // 
             // lblLicenca
             // 
+            this.lblLicenca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblLicenca.AutoSize = true;
             this.lblLicenca.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLicenca.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblLicenca.Location = new System.Drawing.Point(213, 596);
+            this.lblLicenca.Location = new System.Drawing.Point(213, 606);
             this.lblLicenca.Name = "lblLicenca";
             this.lblLicenca.Size = new System.Drawing.Size(574, 33);
             this.lblLicenca.TabIndex = 10;
@@ -229,6 +241,7 @@ namespace MasterRadios
             // 
             // lblDataHoje
             // 
+            this.lblDataHoje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDataHoje.AutoSize = true;
             this.lblDataHoje.Location = new System.Drawing.Point(771, 644);
             this.lblDataHoje.Name = "lblDataHoje";
@@ -238,6 +251,7 @@ namespace MasterRadios
             // 
             // lblDataRestante
             // 
+            this.lblDataRestante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDataRestante.AutoSize = true;
             this.lblDataRestante.Location = new System.Drawing.Point(330, 644);
             this.lblDataRestante.Name = "lblDataRestante";
@@ -270,7 +284,9 @@ namespace MasterRadios
             this.Name = "frmServicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Controle de Serviços e Reparos";
+            this.MaximizedBoundsChanged += new System.EventHandler(this.frmServicos_MaximizedBoundsChanged);
             this.Load += new System.EventHandler(this.frmServicos_Load);
+            this.SizeChanged += new System.EventHandler(this.frmServicos_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicos)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

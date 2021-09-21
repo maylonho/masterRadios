@@ -22,6 +22,8 @@ namespace MasterRadios
         private void frmServicos_Load(object sender, EventArgs e)
 
         {
+
+            
             int dia = DateTime.Now.Day;
             int mes = DateTime.Now.Month;
             int ano = DateTime.Now.Year;
@@ -40,12 +42,11 @@ namespace MasterRadios
             lblDataHoje.Text = DateTime.Now.ToString("D");
             dgv_Servicos.DataSource = classBanco.ObterServicos();
             dgv_Servicos.Columns[0].Visible = false;
-            dgv_Servicos.Columns[0].Width = 30;
-            dgv_Servicos.Columns[1].Width = 110;
-            dgv_Servicos.Columns[2].Width = 80;
-            dgv_Servicos.Columns[3].Width = 90;
-            dgv_Servicos.Columns[4].Width = 330;
-            dgv_Servicos.Columns[5].Width = 430;
+            dgv_Servicos.Columns[1].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+            dgv_Servicos.Columns[2].Width = (frmServicos.ActiveForm.Width / 100) * 6;
+            dgv_Servicos.Columns[3].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+            dgv_Servicos.Columns[4].Width = (frmServicos.ActiveForm.Width / 100) * 35;
+            dgv_Servicos.Columns[5].Width = (frmServicos.ActiveForm.Width / 100) * 50;
 
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
@@ -148,6 +149,32 @@ namespace MasterRadios
             txtDefeito.Text = dgv.SelectedRows[0].Cells[4].Value.ToString();
             txtSolucao.Text = dgv.SelectedRows[0].Cells[5].Value.ToString();
             
+        }
+
+        private void frmServicos_MaximizedBoundsChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void frmServicos_SizeChanged(object sender, EventArgs e)
+        {
+            Form currentForm = frmServicos.ActiveForm;
+
+            if (currentForm != null)
+            {
+                //use currentForm properties
+                dgv_Servicos.Width = frmServicos.ActiveForm.Width - 40;
+                dgv_Servicos.Height = frmServicos.ActiveForm.Height - 200;
+                dgv_Servicos.Columns[1].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+                dgv_Servicos.Columns[2].Width = (frmServicos.ActiveForm.Width / 100) * 6;
+                dgv_Servicos.Columns[3].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+                dgv_Servicos.Columns[4].Width = (frmServicos.ActiveForm.Width / 100) * 35;
+                dgv_Servicos.Columns[5].Width = (frmServicos.ActiveForm.Width / 100) * 50;
+
+            }
+
+
+
         }
     }
 }

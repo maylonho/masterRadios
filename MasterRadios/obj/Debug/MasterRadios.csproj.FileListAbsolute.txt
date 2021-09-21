@@ -21,3 +21,26 @@ C:\Users\maste\Desktop\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.C
 C:\Users\maste\Desktop\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.CopyComplete
 C:\Users\maste\Desktop\MasterRadios\MasterRadios\obj\Debug\MasterRadios.exe
 C:\Users\maste\Desktop\MasterRadios\MasterRadios\obj\Debug\MasterRadios.pdb
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\MasterRadios.exe.config
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\MasterRadios.exe
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\Eagle.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\EntityFramework.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\System.Data.SQLite.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\System.Data.SQLite.SEE.License.dll
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\EntityFramework.xml
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\System.Data.SQLite.xml
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.AssemblyReference.cache
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.frmPrincipal.resources
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.frmServicos.resources
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.frmServicos_Edit.resources
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.Properties.Resources.resources
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.GenerateResource.cache
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.CopyComplete
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.exe
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.pdb
+C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\MasterRadios.pdb
