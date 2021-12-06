@@ -29,7 +29,7 @@ namespace MasterRadios
             int ano = DateTime.Now.Year;
             
             System.DateTime dtinicial = new System.DateTime(ano, mes, dia);
-            System.DateTime dtfinal = new System.DateTime(2021, 12, 01);
+            System.DateTime dtfinal = new System.DateTime(2022, 03, 01);
             System.TimeSpan date5 = dtfinal - dtinicial;
 
             int dateExpira = Int32.Parse(date5.Days.ToString());
@@ -51,7 +51,7 @@ namespace MasterRadios
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
 
-            if(qtditens >= 200 || dateExpira <= 0)
+            if(qtditens >= 400 || dateExpira <= 0)
             {
                 MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
                 txtDefeito.Enabled = false;
