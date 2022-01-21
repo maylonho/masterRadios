@@ -40,7 +40,9 @@ namespace MasterRadios
             lblDataRestante.Text = dateExpira.ToString();
 
             lblDataHoje.Text = DateTime.Now.ToString("D");
-            dgv_Servicos.DataSource = classBanco.ObterServicos();
+
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC LIMIT 100";
+            dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
             dgv_Servicos.Columns[0].Visible = false;
             dgv_Servicos.Columns[1].Width = (frmServicos.ActiveForm.Width / 100) * 10;
             dgv_Servicos.Columns[2].Width = (frmServicos.ActiveForm.Width / 100) * 6;
@@ -51,7 +53,11 @@ namespace MasterRadios
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
 
-            if(qtditens >= 400 || dateExpira <= 0)
+
+            int qtdReg = Int16.Parse(dgv_Servicos.Rows[0].Cells[0].Value.ToString());
+            lblQtdRegistros.Text = qtdReg.ToString();
+
+            if(qtdReg >= 450 || dateExpira <= 0)
             {
                 MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
                 txtDefeito.Enabled = false;
@@ -85,14 +91,21 @@ namespace MasterRadios
             cs.defeito = txtDefeito.Text;
 
             classBanco.CadastrarServico(cs);
-            dgv_Servicos.DataSource = classBanco.ObterServicos();
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC LIMIT 100";
+            dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
             txtNumeroSerie.Focus();
+
+            txtDefeito.Clear();
+            txtNumeroSerie.Clear();
+            txtSolucao.Clear();
+            cbModelo.Text = "Selecione";
   
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            dgv_Servicos.DataSource = classBanco.ObterServicosNumeroSerie(txtNumeroSerie.Text);
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos WHERE S_numero_serie LIKE '" + txtNumeroSerie.Text + "%' ORDER BY D_data_servico DESC";
+            dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,7 +114,8 @@ namespace MasterRadios
 
         private void txtNumeroSerie_TextChanged(object sender, EventArgs e)
         {
-            dgv_Servicos.DataSource = classBanco.ObterServicosNumeroSerie(txtNumeroSerie.Text);
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos WHERE S_numero_serie LIKE '" + txtNumeroSerie.Text + "%' ORDER BY D_data_servico DESC";
+            dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
         }
@@ -124,6 +138,11 @@ namespace MasterRadios
 
             frmServicos_Edit edit = new frmServicos_Edit(id, modelo, numSerie, defeito, solucao, this);
             edit.ShowDialog();
+
+            txtDefeito.Clear();
+            txtNumeroSerie.Clear();
+            txtSolucao.Clear();
+            cbModelo.Text = "Selecione";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -175,6 +194,26 @@ namespace MasterRadios
 
 
 
+        }
+
+        private void dgv_Servicos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC";
+            dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
+            dgv_Servicos.Columns[0].Visible = false;
+            dgv_Servicos.Columns[1].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+            dgv_Servicos.Columns[2].Width = (frmServicos.ActiveForm.Width / 100) * 6;
+            dgv_Servicos.Columns[3].Width = (frmServicos.ActiveForm.Width / 100) * 10;
+            dgv_Servicos.Columns[4].Width = (frmServicos.ActiveForm.Width / 100) * 35;
+            dgv_Servicos.Columns[5].Width = (frmServicos.ActiveForm.Width / 100) * 50;
+
+            int qtditens = dgv_Servicos.Rows.Count;
+            lblContItens.Text = qtditens.ToString();
         }
     }
 }

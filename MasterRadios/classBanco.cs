@@ -26,31 +26,9 @@ namespace MasterRadios
 
         }
 
-        public static DataTable ObterServicosNumeroSerie(string numSeriePesquisa)
-        {
-            
-            SQLiteDataAdapter da = null;
-            DataTable dt = new DataTable();
-            try
-            {
-                var vcon = ConexaoBanco();
-                var cmd = vcon.CreateCommand();
-                cmd.CommandText = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos WHERE S_numero_serie LIKE '" + numSeriePesquisa+ "%' ORDER BY D_data_servico DESC";
-                da = new SQLiteDataAdapter(cmd.CommandText, vcon);
-                da.Fill(dt);
-                vcon.Close();
-                return dt;
+        
 
-               
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
-        public static DataTable ObterServicos()
+        public static DataTable ObterServicos(string sql_query)
         {
             SQLiteDataAdapter da = null;
             DataTable dt = new DataTable();
@@ -58,7 +36,7 @@ namespace MasterRadios
             {
                 var vcon = ConexaoBanco();
                 var cmd = vcon.CreateCommand();
-                cmd.CommandText = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC";
+                cmd.CommandText = sql_query;
                 da = new SQLiteDataAdapter(cmd.CommandText, vcon);
                 da.Fill(dt);
                 vcon.Close();

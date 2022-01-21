@@ -38,7 +38,8 @@ namespace MasterRadios
             if(res == DialogResult.Yes)
             {
                 classBanco.DeletarServico(lblId.Text);
-                fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
+                string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC LIMIT 100";
+                fp.dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
                 Close();
             }
 
@@ -58,10 +59,13 @@ namespace MasterRadios
                 u.solucao = txtSolucao_edit.Text;
 
                 classBanco.AtualizarUsuario(u);
-
-                fp.dgv_Servicos.DataSource = classBanco.ObterServicos();
+                string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos ORDER BY D_data_servico DESC LIMIT 100";
+                fp.dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
                 Close();
             }
+
+
+
         }
 
         private void frmServicos_Edit_FormClosed(object sender, FormClosedEventArgs e)

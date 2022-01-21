@@ -44,3 +44,28 @@ C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.csproj.C
 C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.exe
 C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.pdb
 C:\Program Files (x86)\MasterRadios\MasterRadios\bin\Debug\MasterRadios.pdb
+C:\Program Files (x86)\MasterRadios\MasterRadios\obj\Debug\MasterRadios.frmEstoque.resources
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\MasterRadios.exe.config
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\MasterRadios.exe
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\MasterRadios.pdb
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\Eagle.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\EntityFramework.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\System.Data.SQLite.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\System.Data.SQLite.SEE.License.dll
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\EntityFramework.xml
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\maste\Desktop\MasterRadios\bin\Debug\System.Data.SQLite.xml
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.csproj.AssemblyReference.cache
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.frmPrincipal.resources
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.frmEstoque.resources
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.frmServicos.resources
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.frmServicos_Edit.resources
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.Properties.Resources.resources
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.csproj.GenerateResource.cache
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.csproj.CoreCompileInputs.cache
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.csproj.CopyComplete
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.exe
+C:\Users\maste\Desktop\MasterRadios\obj\Debug\MasterRadios.pdb

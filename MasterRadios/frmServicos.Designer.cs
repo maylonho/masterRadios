@@ -50,6 +50,8 @@ namespace MasterRadios
             this.lblLicenca = new System.Windows.Forms.Label();
             this.lblDataHoje = new System.Windows.Forms.Label();
             this.lblDataRestante = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lblQtdRegistros = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Servicos)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -177,7 +179,6 @@ namespace MasterRadios
             this.dgv_Servicos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Servicos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgv_Servicos.Location = new System.Drawing.Point(13, 13);
-            this.dgv_Servicos.MultiSelect = false;
             this.dgv_Servicos.Name = "dgv_Servicos";
             this.dgv_Servicos.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -193,6 +194,7 @@ namespace MasterRadios
             this.dgv_Servicos.Size = new System.Drawing.Size(959, 512);
             this.dgv_Servicos.TabIndex = 8;
             this.dgv_Servicos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Servicos_CellClick);
+            this.dgv_Servicos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Servicos_CellContentClick);
             this.dgv_Servicos.SelectionChanged += new System.EventHandler(this.dgv_Servicos_SelectionChanged);
             this.dgv_Servicos.DoubleClick += new System.EventHandler(this.dgv_Servicos_DoubleClick);
             // 
@@ -259,11 +261,34 @@ namespace MasterRadios
             this.lblDataRestante.TabIndex = 12;
             this.lblDataRestante.Text = "--";
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 536);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(127, 13);
+            this.linkLabel1.TabIndex = 13;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Mostrar todos os registros";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lblQtdRegistros
+            // 
+            this.lblQtdRegistros.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblQtdRegistros.AutoSize = true;
+            this.lblQtdRegistros.Location = new System.Drawing.Point(200, 644);
+            this.lblQtdRegistros.Name = "lblQtdRegistros";
+            this.lblQtdRegistros.Size = new System.Drawing.Size(31, 13);
+            this.lblQtdRegistros.TabIndex = 14;
+            this.lblQtdRegistros.Text = "0000";
+            // 
             // frmServicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.lblQtdRegistros);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lblDataRestante);
             this.Controls.Add(this.lblDataHoje);
             this.Controls.Add(this.lblLicenca);
@@ -316,5 +341,7 @@ namespace MasterRadios
         public System.Windows.Forms.Label lblLicenca;
         private System.Windows.Forms.Label lblDataHoje;
         private System.Windows.Forms.Label lblDataRestante;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label lblQtdRegistros;
     }
 }

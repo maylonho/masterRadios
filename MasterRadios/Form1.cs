@@ -27,5 +27,11 @@ namespace MasterRadios
             frmServicos frmServicos = new frmServicos();
             frmServicos.Show();
         }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstoque frmEstoque = new frmEstoque();
+            frmEstoque.Show();
+        }
     }
 }

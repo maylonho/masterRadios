@@ -91,10 +91,19 @@
     <Compile Include="frmServicos_Edit.Designer.cs">
       <DependentUpon>frmServicos_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstoque.Designer.cs">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstoque.resx">
+      <DependentUpon>frmEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmServicos.resx">
       <DependentUpon>frmServicos.cs</DependentUpon>
