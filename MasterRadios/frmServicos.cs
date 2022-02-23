@@ -57,7 +57,7 @@ namespace MasterRadios
             int qtdReg = Int16.Parse(dgv_Servicos.Rows[0].Cells[0].Value.ToString());
             lblQtdRegistros.Text = qtdReg.ToString();
 
-            if(qtdReg >= 450 || dateExpira <= 0)
+            if(qtdReg >= 850 || dateExpira <= 0)
             {
                 MessageBox.Show("Sua Licença expirou, procure o desenvolovedor para obter a licença\nCopyrigth 2021 - Maylon");
                 txtDefeito.Enabled = false;
@@ -95,10 +95,10 @@ namespace MasterRadios
             dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
             txtNumeroSerie.Focus();
 
-            txtDefeito.Clear();
+            //txtDefeito.Clear();
             txtNumeroSerie.Clear();
-            txtSolucao.Clear();
-            cbModelo.Text = "Selecione";
+            //txtSolucao.Clear();
+            //cbModelo.Text = "Selecione";
   
         }
 
@@ -114,7 +114,7 @@ namespace MasterRadios
 
         private void txtNumeroSerie_TextChanged(object sender, EventArgs e)
         {
-            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos WHERE S_numero_serie LIKE '" + txtNumeroSerie.Text + "%' ORDER BY D_data_servico DESC";
+            string sql = "SELECT I_id_servico as 'ID', D_data_servico as 'Data', S_modelo as 'Modelo', S_numero_serie as 'Número de Série', S_defeito as 'Defeito', S_solucao as 'Solução' FROM servicos WHERE S_numero_serie LIKE '" + txtNumeroSerie.Text + "%' ORDER BY D_data_servico DESC LIMIT 100";
             dgv_Servicos.DataSource = classBanco.ObterServicos(sql);
             int qtditens = dgv_Servicos.Rows.Count;
             lblContItens.Text = qtditens.ToString();
