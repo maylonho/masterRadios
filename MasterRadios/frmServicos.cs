@@ -29,7 +29,7 @@ namespace MasterRadios
             int ano = DateTime.Now.Year;
             
             System.DateTime dtinicial = new System.DateTime(ano, mes, dia);
-            System.DateTime dtfinal = new System.DateTime(2022, 03, 01);
+            System.DateTime dtfinal = new System.DateTime(2022, 05, 01);
             System.TimeSpan date5 = dtfinal - dtinicial;
 
             int dateExpira = Int32.Parse(date5.Days.ToString());
